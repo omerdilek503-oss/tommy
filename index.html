@@ -7,6 +7,7 @@
 <title>טומי רוסנו | תיווך נדל״ן באשדוד</title>
 
 <style>
+
 *{
     margin:0;
     padding:0;
@@ -18,28 +19,33 @@ html{
 }
 
 body{
-    font-family:Arial, sans-serif;
-    background:#0b0b0b;
+    font-family:Arial,sans-serif;
+    background:#080808;
     color:#fff;
 }
 
-/* NAVBAR */
+/* NAV */
+
 nav{
     position:fixed;
     top:0;
     width:100%;
-    z-index:100;
+    z-index:1000;
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:22px 7%;
-    background:#0b0b0bf2;
+
+    padding:20px 7%;
+
+    background:#080808ee;
+    backdrop-filter:blur(15px);
+
     border-bottom:1px solid #333;
-    backdrop-filter:blur(12px);
 }
 
 .logo{
-    font-size:25px;
+    font-size:24px;
     font-weight:900;
     letter-spacing:2px;
 }
@@ -49,7 +55,7 @@ nav{
 }
 
 nav a{
-    color:#ccc;
+    color:#aaa;
     text-decoration:none;
     margin-right:25px;
     transition:.3s;
@@ -60,61 +66,82 @@ nav a:hover{
 }
 
 /* HERO */
+
 .hero{
     min-height:100vh;
+
     display:flex;
     align-items:center;
     justify-content:center;
+
     text-align:center;
+
     padding:130px 20px 80px;
 
     background:
-        linear-gradient(#000b,#000b),
-        radial-gradient(circle at center,#444,#050505 60%);
+        radial-gradient(circle at center,#444 0%,#111 35%,#050505 70%);
 }
 
 .hero-small{
     color:#aaa;
-    letter-spacing:5px;
     font-size:14px;
+    letter-spacing:6px;
     margin-bottom:20px;
 }
 
 h1{
     font-size:clamp(55px,10vw,110px);
     font-weight:900;
-    letter-spacing:4px;
+    letter-spacing:3px;
+
+    background:linear-gradient(
+        90deg,
+        #fff,
+        #aaa,
+        #fff
+    );
+
+    -webkit-background-clip:text;
+    color:transparent;
 }
 
 .hero h2{
     font-size:clamp(24px,4vw,40px);
-    color:#ccc;
     margin:15px 0;
+    color:#ddd;
 }
 
 .hero p{
+    max-width:700px;
+    margin:auto;
+
     color:#999;
     font-size:19px;
-    line-height:1.8;
-    max-width:650px;
-    margin:auto;
+    line-height:1.9;
 }
 
 /* BUTTONS */
+
 .buttons{
+    margin-top:35px;
+
     display:flex;
     justify-content:center;
-    gap:15px;
+    gap:12px;
     flex-wrap:wrap;
-    margin-top:35px;
 }
 
 .btn{
     display:inline-block;
+
     padding:16px 30px;
+
     border-radius:8px;
+
     text-decoration:none;
+
     font-weight:bold;
+
     transition:.25s;
 }
 
@@ -133,7 +160,13 @@ h1{
     background:#111;
 }
 
+.whatsapp{
+    background:#25D366;
+    color:#fff;
+}
+
 /* SECTIONS */
+
 section{
     max-width:1100px;
     margin:auto;
@@ -143,42 +176,74 @@ section{
 .title{
     text-align:center;
     font-size:40px;
-    margin-bottom:45px;
+    margin-bottom:20px;
 }
 
 .subtitle{
     text-align:center;
     color:#888;
-    margin-top:-30px;
-    margin-bottom:40px;
+    margin-bottom:45px;
 }
 
-/* CARDS */
+/* ABOUT */
+
+.about-box{
+    max-width:800px;
+    margin:auto;
+
+    background:#111;
+
+    border:1px solid #292929;
+
+    border-radius:18px;
+
+    padding:40px;
+
+    text-align:center;
+}
+
+.about-box p{
+    color:#aaa;
+    font-size:19px;
+    line-height:2;
+}
+
+/* SERVICES */
+
 .cards{
     display:grid;
+
     grid-template-columns:
         repeat(auto-fit,minmax(230px,1fr));
+
     gap:22px;
 }
 
 .card{
     background:#111;
-    border:1px solid #2d2d2d;
-    border-radius:16px;
+
+    border:1px solid #292929;
+
+    border-radius:18px;
+
     padding:35px 25px;
+
     text-align:center;
+
     transition:.3s;
 }
 
 .card:hover{
     transform:translateY(-7px);
+
     border-color:#777;
+
     box-shadow:0 15px 40px #000;
 }
 
 .icon{
     font-size:45px;
-    margin-bottom:15px;
+    margin-bottom:18px;
 }
 
 .card h3{
@@ -191,62 +256,106 @@ section{
     line-height:1.7;
 }
 
-/* ABOUT */
-.about{
+/* PROPERTIES */
+
+.property{
+    min-height:240px;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+
+    background:
+        linear-gradient(
+            135deg,
+            #151515,
+            #090909
+        );
+
+    border:1px solid #333;
+}
+
+.property-number{
+    font-size:55px;
+    margin-bottom:15px;
+}
+
+.property span{
+    color:#777;
+}
+
+/* CONTACT */
+
+.contact{
+    text-align:center;
+
     background:#101010;
+
     border-top:1px solid #222;
     border-bottom:1px solid #222;
 }
 
-.about-text{
-    max-width:800px;
-    margin:auto;
-    text-align:center;
-    color:#aaa;
-    font-size:19px;
-    line-height:2;
-}
-
-/* CONTACT */
-.contact{
-    text-align:center;
-}
-
 .phone{
+    direction:ltr;
+
     font-size:34px;
     font-weight:bold;
+
     margin:25px 0;
-    direction:ltr;
+}
+
+.message{
+    color:#aaa;
+
+    font-size:18px;
+
+    margin-bottom:25px;
+
+    line-height:1.7;
 }
 
 /* FOOTER */
+
 footer{
     text-align:center;
-    padding:45px 20px;
+
+    padding:50px 20px;
+
     color:#666;
+
     border-top:1px solid #222;
 }
 
 /* MOBILE */
-@media(max-width:600px){
+
+@media(max-width:650px){
 
     nav{
-        padding:18px 5%;
+        padding:17px 5%;
     }
 
     nav a{
         margin-right:10px;
-        font-size:13px;
+        font-size:12px;
     }
 
     .phone{
-        font-size:26px;
+        font-size:27px;
     }
+
+    .about-box{
+        padding:25px;
+    }
+
 }
+
 </style>
+
 </head>
 
 <body>
+
 
 <!-- NAVIGATION -->
 
@@ -257,9 +366,19 @@ footer{
     </div>
 
     <div>
-        <a href="#about">אודות</a>
-        <a href="#services">שירותים</a>
-        <a href="#contact">צור קשר</a>
+
+        <a href="#about">
+            אודות
+        </a>
+
+        <a href="#properties">
+            נכסים
+        </a>
+
+        <a href="#contact">
+            צור קשר
+        </a>
+
     </div>
 
 </nav>
@@ -286,21 +405,28 @@ footer{
         <p>
             מחפשים לקנות, למכור או להשכיר נכס?
             <br>
-            טומי רוסנו כאן כדי לעזור לכם למצוא את העסקה המתאימה.
+            אני כאן כדי לעזור לכם למצוא את העסקה המתאימה.
         </p>
+
 
         <div class="buttons">
 
             <a
                 class="btn white"
                 href="tel:0503780464">
+
                 📞 התקשרו עכשיו
+
             </a>
 
+
             <a
-                class="btn outline"
-                href="#contact">
-                ✉️ צרו קשר
+                class="btn whatsapp"
+                href="https://wa.me/972503780464"
+                target="_blank">
+
+                💬 WhatsApp
+
             </a>
 
         </div>
@@ -312,111 +438,182 @@ footer{
 
 <!-- ABOUT -->
 
-<section id="about" class="about">
+<section id="about">
 
     <h2 class="title">
         אודות
     </h2>
 
-    <p class="about-text">
-        טומי רוסנו מתמחה בתחום הנדל״ן באשדוד,
-        ומעניק ללקוחותיו ליווי אישי לאורך תהליך
-        הקנייה, המכירה וההשכרה של נכסים.
-        <br><br>
-        המטרה היא להפוך את תהליך הנדל״ן
-        לפשוט, ברור ונוח יותר.
-    </p>
-
-</section>
-
-
-<!-- SERVICES -->
-
-<section id="services">
-
-    <h2 class="title">
-        השירותים שלנו
-    </h2>
-
     <p class="subtitle">
-        פתרונות נדל״ן באשדוד
+        שירות אישי ומקצועי באשדוד
     </p>
 
-    <div class="cards">
 
-        <div class="card">
+    <div class="about-box">
 
-            <div class="icon">🏠</div>
+        <p>
 
-            <h3>
-                מכירת נכסים
-            </h3>
+            טומי רוסנו מתמחה בתחום הנדל״ן
+            באזור אשדוד.
 
-            <p>
-                ליווי בתהליך מכירת הבית
-                והתאמת העסקה לצרכים שלכם.
-            </p>
+            <br><br>
 
-        </div>
+            ליווי אישי לאורך תהליך
+            הקנייה, המכירה והשכרת הנכס.
 
+            <br><br>
 
-        <div class="card">
+            המטרה היא להפוך את תהליך
+            הנדל״ן לפשוט, ברור ונוח.
 
-            <div class="icon">🔑</div>
-
-            <h3>
-                קניית נכסים
-            </h3>
-
-            <p>
-                עזרה באיתור נכסים והתאמתם
-                למה שאתם מחפשים.
-            </p>
-
-        </div>
-
-
-        <div class="card">
-
-            <div class="icon">🏢</div>
-
-            <h3>
-                השכרה
-            </h3>
-
-            <p>
-                סיוע במציאת נכסים להשכרה
-                ובתהליך ההתקשרות.
-            </p>
-
-        </div>
+        </p>
 
     </div>
 
 </section>
 
 
-<!-- LOCATION -->
+<!-- SERVICES -->
 
 <section>
 
     <h2 class="title">
-        📍 אזור פעילות
+        השירותים שלי
     </h2>
 
-    <div class="card">
+    <p class="subtitle">
+        פתרונות נדל״ן במקום אחד
+    </p>
 
-        <div class="icon">
-            📍
+
+    <div class="cards">
+
+
+        <div class="card">
+
+            <div class="icon">
+                🏠
+            </div>
+
+            <h3>
+                מכירת נכסים
+            </h3>
+
+            <p>
+                ליווי בתהליך מכירת
+                הדירה או הבית שלכם.
+            </p>
+
         </div>
 
-        <h3>
-            אשדוד
-        </h3>
 
-        <p>
-            שירותי תיווך נדל״ן באזור אשדוד.
-        </p>
+        <div class="card">
+
+            <div class="icon">
+                🔑
+            </div>
+
+            <h3>
+                קניית נכסים
+            </h3>
+
+            <p>
+                עזרה במציאת נכס
+                שמתאים לצרכים שלכם.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">
+                🏢
+            </div>
+
+            <h3>
+                השכרת נכסים
+            </h3>
+
+            <p>
+                סיוע במציאת דירות
+                ונכסים להשכרה.
+            </p>
+
+        </div>
+
+
+    </div>
+
+</section>
+
+
+<!-- PROPERTIES -->
+
+<section id="properties">
+
+    <h2 class="title">
+        🏡 נכסים
+    </h2>
+
+    <p class="subtitle">
+        בקרוב יופיעו כאן נכסים זמינים
+    </p>
+
+
+    <div class="cards">
+
+
+        <div class="card property">
+
+            <div class="property-number">
+                🏠
+            </div>
+
+            <h3>
+                נכס חדש
+            </h3>
+
+            <span>
+                תמונות ופרטים יתווספו בקרוב
+            </span>
+
+        </div>
+
+
+        <div class="card property">
+
+            <div class="property-number">
+                🏢
+            </div>
+
+            <h3>
+                נכס להשכרה
+            </h3>
+
+            <span>
+                תמונות ופרטים יתווספו בקרוב
+            </span>
+
+        </div>
+
+
+        <div class="card property">
+
+            <div class="property-number">
+                🔑
+            </div>
+
+            <h3>
+                נכס למכירה
+            </h3>
+
+            <span>
+                תמונות ופרטים יתווספו בקרוב
+            </span>
+
+        </div>
+
 
     </div>
 
@@ -428,25 +625,48 @@ footer{
 <section id="contact" class="contact">
 
     <h2 class="title">
-        צור קשר
+        📞 צור קשר
     </h2>
 
-    <p>
-        רוצים לדבר על נכס?
-        התקשרו עכשיו.
+
+    <p class="message">
+
+        לא עניתי לכם?
+
+        <br>
+
+        שלחו לי הודעה ב־WhatsApp
+        ואחזור אליכם בהקדם.
+
     </p>
+
 
     <div class="phone">
         050-378-0464
     </div>
 
+
     <div class="buttons">
+
 
         <a
             class="btn white"
             href="tel:0503780464">
+
             📞 התקשרו לטומי
+
         </a>
+
+
+        <a
+            class="btn whatsapp"
+            href="https://wa.me/972503780464"
+            target="_blank">
+
+            💬 שלחו הודעה ב־WhatsApp
+
+        </a>
+
 
     </div>
 
@@ -455,9 +675,13 @@ footer{
 
 <footer>
 
-    © 2026 טומי רוסנו | תיווך נדל״ן באשדוד
+    © 2026 טומי רוסנו
+    |
+    תיווך נדל״ן באשדוד
 
 </footer>
 
+
 </body>
+
 </html>
