@@ -1,0 +1,463 @@
+<!DOCTYPE html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>טומי רוסנו | תיווך נדל״ן באשדוד</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:Arial, sans-serif;
+    background:#0b0b0b;
+    color:#fff;
+}
+
+/* NAVBAR */
+nav{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:100;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:22px 7%;
+    background:#0b0b0bf2;
+    border-bottom:1px solid #333;
+    backdrop-filter:blur(12px);
+}
+
+.logo{
+    font-size:25px;
+    font-weight:900;
+    letter-spacing:2px;
+}
+
+.logo span{
+    color:#aaa;
+}
+
+nav a{
+    color:#ccc;
+    text-decoration:none;
+    margin-right:25px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#fff;
+}
+
+/* HERO */
+.hero{
+    min-height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    padding:130px 20px 80px;
+
+    background:
+        linear-gradient(#000b,#000b),
+        radial-gradient(circle at center,#444,#050505 60%);
+}
+
+.hero-small{
+    color:#aaa;
+    letter-spacing:5px;
+    font-size:14px;
+    margin-bottom:20px;
+}
+
+h1{
+    font-size:clamp(55px,10vw,110px);
+    font-weight:900;
+    letter-spacing:4px;
+}
+
+.hero h2{
+    font-size:clamp(24px,4vw,40px);
+    color:#ccc;
+    margin:15px 0;
+}
+
+.hero p{
+    color:#999;
+    font-size:19px;
+    line-height:1.8;
+    max-width:650px;
+    margin:auto;
+}
+
+/* BUTTONS */
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:35px;
+}
+
+.btn{
+    display:inline-block;
+    padding:16px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.25s;
+}
+
+.btn:hover{
+    transform:translateY(-4px);
+}
+
+.white{
+    background:#fff;
+    color:#000;
+}
+
+.outline{
+    border:1px solid #777;
+    color:#fff;
+    background:#111;
+}
+
+/* SECTIONS */
+section{
+    max-width:1100px;
+    margin:auto;
+    padding:90px 20px;
+}
+
+.title{
+    text-align:center;
+    font-size:40px;
+    margin-bottom:45px;
+}
+
+.subtitle{
+    text-align:center;
+    color:#888;
+    margin-top:-30px;
+    margin-bottom:40px;
+}
+
+/* CARDS */
+.cards{
+    display:grid;
+    grid-template-columns:
+        repeat(auto-fit,minmax(230px,1fr));
+    gap:22px;
+}
+
+.card{
+    background:#111;
+    border:1px solid #2d2d2d;
+    border-radius:16px;
+    padding:35px 25px;
+    text-align:center;
+    transition:.3s;
+}
+
+.card:hover{
+    transform:translateY(-7px);
+    border-color:#777;
+    box-shadow:0 15px 40px #000;
+}
+
+.icon{
+    font-size:45px;
+    margin-bottom:15px;
+}
+
+.card h3{
+    font-size:23px;
+    margin-bottom:12px;
+}
+
+.card p{
+    color:#999;
+    line-height:1.7;
+}
+
+/* ABOUT */
+.about{
+    background:#101010;
+    border-top:1px solid #222;
+    border-bottom:1px solid #222;
+}
+
+.about-text{
+    max-width:800px;
+    margin:auto;
+    text-align:center;
+    color:#aaa;
+    font-size:19px;
+    line-height:2;
+}
+
+/* CONTACT */
+.contact{
+    text-align:center;
+}
+
+.phone{
+    font-size:34px;
+    font-weight:bold;
+    margin:25px 0;
+    direction:ltr;
+}
+
+/* FOOTER */
+footer{
+    text-align:center;
+    padding:45px 20px;
+    color:#666;
+    border-top:1px solid #222;
+}
+
+/* MOBILE */
+@media(max-width:600px){
+
+    nav{
+        padding:18px 5%;
+    }
+
+    nav a{
+        margin-right:10px;
+        font-size:13px;
+    }
+
+    .phone{
+        font-size:26px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVIGATION -->
+
+<nav>
+
+    <div class="logo">
+        TOMMY <span>ROSSANO</span>
+    </div>
+
+    <div>
+        <a href="#about">אודות</a>
+        <a href="#services">שירותים</a>
+        <a href="#contact">צור קשר</a>
+    </div>
+
+</nav>
+
+
+<!-- HERO -->
+
+<header class="hero">
+
+    <div>
+
+        <div class="hero-small">
+            REAL ESTATE • ASHDOD
+        </div>
+
+        <h1>
+            טומי רוסנו
+        </h1>
+
+        <h2>
+            תיווך נדל״ן באשדוד
+        </h2>
+
+        <p>
+            מחפשים לקנות, למכור או להשכיר נכס?
+            <br>
+            טומי רוסנו כאן כדי לעזור לכם למצוא את העסקה המתאימה.
+        </p>
+
+        <div class="buttons">
+
+            <a
+                class="btn white"
+                href="tel:0503780464">
+                📞 התקשרו עכשיו
+            </a>
+
+            <a
+                class="btn outline"
+                href="#contact">
+                ✉️ צרו קשר
+            </a>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<!-- ABOUT -->
+
+<section id="about" class="about">
+
+    <h2 class="title">
+        אודות
+    </h2>
+
+    <p class="about-text">
+        טומי רוסנו מתמחה בתחום הנדל״ן באשדוד,
+        ומעניק ללקוחותיו ליווי אישי לאורך תהליך
+        הקנייה, המכירה וההשכרה של נכסים.
+        <br><br>
+        המטרה היא להפוך את תהליך הנדל״ן
+        לפשוט, ברור ונוח יותר.
+    </p>
+
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+
+    <h2 class="title">
+        השירותים שלנו
+    </h2>
+
+    <p class="subtitle">
+        פתרונות נדל״ן באשדוד
+    </p>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">🏠</div>
+
+            <h3>
+                מכירת נכסים
+            </h3>
+
+            <p>
+                ליווי בתהליך מכירת הבית
+                והתאמת העסקה לצרכים שלכם.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🔑</div>
+
+            <h3>
+                קניית נכסים
+            </h3>
+
+            <p>
+                עזרה באיתור נכסים והתאמתם
+                למה שאתם מחפשים.
+            </p>
+
+        </div>
+
+
+        <div class="card">
+
+            <div class="icon">🏢</div>
+
+            <h3>
+                השכרה
+            </h3>
+
+            <p>
+                סיוע במציאת נכסים להשכרה
+                ובתהליך ההתקשרות.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- LOCATION -->
+
+<section>
+
+    <h2 class="title">
+        📍 אזור פעילות
+    </h2>
+
+    <div class="card">
+
+        <div class="icon">
+            📍
+        </div>
+
+        <h3>
+            אשדוד
+        </h3>
+
+        <p>
+            שירותי תיווך נדל״ן באזור אשדוד.
+        </p>
+
+    </div>
+
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact" class="contact">
+
+    <h2 class="title">
+        צור קשר
+    </h2>
+
+    <p>
+        רוצים לדבר על נכס?
+        התקשרו עכשיו.
+    </p>
+
+    <div class="phone">
+        050-378-0464
+    </div>
+
+    <div class="buttons">
+
+        <a
+            class="btn white"
+            href="tel:0503780464">
+            📞 התקשרו לטומי
+        </a>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    © 2026 טומי רוסנו | תיווך נדל״ן באשדוד
+
+</footer>
+
+</body>
+</html>
